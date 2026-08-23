@@ -496,7 +496,7 @@ function showApproval() {
     goTo('page-approval');
 }
 
-// ─── Submit Application (CRITICAL: capture server ID) ───
+// ─── Submit Application (capture server ID) ───
 async function submitApp() {
     const em = document.getElementById('s3em').value;
     const in_ = +document.getElementById('s3in').value;
@@ -513,8 +513,7 @@ async function submitApp() {
         });
         const data = await response.json();
         if (data.ok) {
-            // ✅ USE SERVER-GENERATED ID
-            S.applicationId = data.applicationId;
+            S.applicationId = data.applicationId;  // CRITICAL
             saveApplicationId(S.applicationId);
             saveApplicationData();
             goTo('page-processing');
